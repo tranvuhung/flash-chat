@@ -9,7 +9,7 @@
 import UIKit
 
 class MessageCell: UITableViewCell {
-
+    
     @IBOutlet weak var bodyLable: UILabel!
     @IBOutlet weak var bubleView: UIView!
     
@@ -31,10 +31,10 @@ class MessageCell: UITableViewCell {
         setupUI()
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -43,7 +43,7 @@ class MessageCell: UITableViewCell {
         
         bubleView.translatesAutoresizingMaskIntoConstraints = false
         bodyLable.translatesAutoresizingMaskIntoConstraints = false
-//        avaImageView.translatesAutoresizingMaskIntoConstraints = false
+        //        avaImageView.translatesAutoresizingMaskIntoConstraints = false
         
         bubleView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         avaImageView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
@@ -55,8 +55,8 @@ class MessageCell: UITableViewCell {
         bubleView.rightAnchor.constraint(equalTo: avaImageView.leftAnchor, constant: -10.0).isActive = true
         bubleView.layer.cornerRadius = 10
         
-//        meAvataImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0).isActive = true
-//        meAvataImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0).isActive = true
+        //        meAvataImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0).isActive = true
+        //        meAvataImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0).isActive = true
         
         NSLayoutConstraint.activate([
             avaImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0),
