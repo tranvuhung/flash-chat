@@ -18,52 +18,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rxd-c5-fku">
-                        <rect key="frame" x="0.0" y="10" width="320" height="24"/>
+                    <view contentMode="top" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-MT-L9x" userLabel="bubleView">
+                        <rect key="frame" x="23" y="-3" width="274" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-MT-L9x" userLabel="bubleView">
-                                <rect key="frame" x="0.0" y="0.0" width="274" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj2-Ji-tus">
-                                        <rect key="frame" x="8" y="0.0" width="266" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Kj2-Ji-tus" secondAttribute="bottom" id="Ehi-IF-hI7"/>
-                                    <constraint firstItem="Kj2-Ji-tus" firstAttribute="leading" secondItem="MdX-MT-L9x" secondAttribute="leading" constant="8" id="Hap-fu-4T7"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kj2-Ji-tus" secondAttribute="trailing" id="fcY-Bk-dAu"/>
-                                    <constraint firstItem="Kj2-Ji-tus" firstAttribute="top" secondItem="MdX-MT-L9x" secondAttribute="top" id="fl6-dF-rQw"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="141-nf-QhO">
-                                <rect key="frame" x="284" y="0.0" width="36" height="24"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj2-Ji-tus">
+                                <rect key="frame" x="8" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="141-nf-QhO" secondAttribute="trailing" constant="8" id="IuH-cg-jdn"/>
-                        </constraints>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="Rxd-c5-fku" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4PR-ES-cIh"/>
-                    <constraint firstAttribute="trailing" secondItem="Rxd-c5-fku" secondAttribute="trailing" id="Dey-Qv-7OR"/>
-                    <constraint firstItem="Rxd-c5-fku" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="S39-gk-taW"/>
-                    <constraint firstAttribute="bottom" secondItem="Rxd-c5-fku" secondAttribute="bottom" constant="10" id="bQb-s2-hJT"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bodyLable" destination="Kj2-Ji-tus" id="JTj-Ie-pa7"/>
+                <outlet property="bubleView" destination="MdX-MT-L9x" id="ZGJ-FE-sWg"/>
             </connections>
             <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="MeAvatar" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
