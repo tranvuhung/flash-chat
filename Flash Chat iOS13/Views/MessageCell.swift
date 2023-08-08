@@ -25,6 +25,12 @@ class MessageCell: UITableViewCell {
         return imageView
     }()
     
+    let youImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "YouAvatar"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,16 +46,23 @@ class MessageCell: UITableViewCell {
     
     private func setupUI(){
         addSubview(avaImageView)
+        addSubview(youImageView)
+        
+        youImageView.isHidden = true
         
         bubleView.translatesAutoresizingMaskIntoConstraints = false
         bodyLable.translatesAutoresizingMaskIntoConstraints = false
         //        avaImageView.translatesAutoresizingMaskIntoConstraints = false
         
         bubleView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        
         avaImageView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         avaImageView.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
         
-        bubleView.backgroundColor = .cyan
+        youImageView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        youImageView.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
+        
+        bubleView.backgroundColor = UIColor(named: K.BrandColors.lighBlue)
         bubleView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0).isActive = true
         bubleView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10.0).isActive = true
         bubleView.rightAnchor.constraint(equalTo: avaImageView.leftAnchor, constant: -10.0).isActive = true
@@ -63,7 +76,10 @@ class MessageCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             avaImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0),
-            avaImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0)
+            avaImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0),
+            
+            youImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0),
+            youImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0)
         ])
     }
     
