@@ -50,16 +50,19 @@ class MessageCell: UITableViewCell {
         avaImageView.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
         
         bubleView.backgroundColor = .cyan
-        bubleView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0).isActive = true
+        bubleView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0).isActive = true
         bubleView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10.0).isActive = true
         bubleView.rightAnchor.constraint(equalTo: avaImageView.leftAnchor, constant: -10.0).isActive = true
         bubleView.layer.cornerRadius = 10
+        
+        bodyLable.leadingAnchor.constraint(equalTo: bubleView.leadingAnchor, constant: 8.0).isActive = true
+        bodyLable.centerYAnchor.constraint(equalTo: bubleView.centerYAnchor).isActive = true
         
         //        meAvataImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0).isActive = true
         //        meAvataImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0).isActive = true
         
         NSLayoutConstraint.activate([
-            avaImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0.0),
+            avaImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0),
             avaImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0)
         ])
     }
